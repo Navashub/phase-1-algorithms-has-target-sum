@@ -1,13 +1,30 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++){
+    const firstNum = array[i];
+
+    const secondNum = target - firstNum;
+
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === secondNum) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+
+  nested loop - O(n*n) => O(n^2)
 */
 
 /* 
   Add your pseudocode here
+two random numbers in array is equal to target , return true
+else return false
+
 */
 
 /*
